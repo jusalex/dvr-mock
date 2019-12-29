@@ -12,6 +12,8 @@ import java.util.List;
 @RequestMapping("/api/")
 public class ServerController {
 
+    private int time = 1;
+
     @RequestMapping("/info")
     public SystemInfo getSystemInfo() {
         SystemInfo systemInfo = new SystemInfo();
@@ -19,7 +21,7 @@ public class ServerController {
         systemInfo.setTotal_space(4100);
         systemInfo.setFilled_space(1100);
         systemInfo.setRecording(true);
-        systemInfo.setRecording_status(60);
+        systemInfo.setRecording_status(time++);
         systemInfo.setSn("777");
         systemInfo.setStorage(true);
         systemInfo.setStorage_wp(true);
